@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block thead %}Alzheimer{% endblock thead %}
+
+{% block content %} 
+<div class="whole-wrap">
+    <div class="container box 1170">
+        <div class="section-top-border">
+                <h1 class="mb-30"><span>Quick Updates  on Alzheimer's</span></h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{url_for('static', filename='img/experts/al.jpg')}}" width="800" height="600" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20">
+                        <p><strong><span>Alzheimers disease (AD) is characterized by severe memory loss and cognitive impairment.</span>It is associated with significant brain structure changes, which can be measured by magnetic resonance imaging (MRI) scan. The observable preclinical structure changes provides an opportunity for AD early detection using image classification tools, like convolutional neural networks (CNN). However, currently most AD related studies were limited by sample size. Finding an efficient way to train image classifiers on limited data hence becomes critical.</strong><br><strong><h4>Therefore, we have implemented a deep-learning framework that will segment the affected part of the brain in the MRI scans along with predicting severity of the alzheimer's disease by generating Heatmaps.</h4> </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container" style="margin: 10rem">
+    <h1 style="margin: auto; font-weight: 600; text-align: center;">Upload MRI Scan</h1>
+    <div style="width: 85%; margin: auto;">
+        <form action="/services/alzheimer" method="POST" enctype="multipart/form-data">
+            <label class="form-label" for="image">Choose Scanned Image</label>
+            <input type="file" class="form-control" name="image" id="image" />
+            <button type="submit" id="singlebutton" name="singlebutton" class="new-btn-d" style="background-color: grey;margin: auto; padding:0.5rem" type="submit">Upload MRI Scan</button>
+        </form>
+    </div>
+</div>
+
+{% if predicted==True %}
+<div class="container">
+    <div style="margin: auto; padding: 2rem; background-color: #6495AD; width: 1000px; ">
+        <div style="margin: auto; padding: 2rem">
+            <img src="data:image/jpeg;base64,{{imgData}}" alt="result" style="width: 60%;">
+            <br>
+            <p style="font-size: 1.5rem; color: white">
+            <span style="font-size: 2rem; font-weight: 600; color: white"> Prediction of Positive Result: </span>{{ supplied_text }}
+            </p>
+         </div>
+     </div>
+</div>
+<br>
+<br>
+{% endif %}
+
+{% endblock content %}

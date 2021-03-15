@@ -1,0 +1,270 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>E-Medical</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="./static/img/favicon.png">
+    <!-- Place favicon".ico in the root directory -->
+
+    <!-- CSS here -->
+    <link href="{{url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/themify-icons.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/nice-select.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/flaticon.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/gijgo.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/animate.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/slicknav.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/style.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+<header>
+  <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo-img">
+                                <a href="{{ url_for('home') }}" target="_blank">SERVICES</a>
+                                    <img src="./static/img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="menu_wrap d-none d-lg-block">
+                                <div class="menu_wrap_inner d-flex align-items-center justify-content-end">
+                                    <div class="main-menu">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a href="{{ url_for('home') }}" target="_blank">HOME</a></li>
+                                                <li><a href="{{ url_for('home', _anchor='about_us_section') }}" target="_blank">ABOUT US</a></li>
+                                                <li><a href="{{ url_for('blog') }}" target="_blank">BLOG</a></li>
+                                                <li><a href="{{ url_for('service') }}" target="_blank">SERVICES</a></li>
+                                                <li><a href="{{ url_for('home', _anchor='contact_us_section') }}" target="_blank">CONTACT</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>    
+<!-- header-end -->
+
+
+    <!-- bradcam_area_start  -->
+
+    <div class="bradcam_area breadcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>{% block thead %} {% endblock thead %}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% block content %}
+
+
+{% endblock content %}
+
+<!-- bradcam_area_end  -->
+
+    <!-- Emergency_contact start -->
+    <div class="Emergency_contact">
+        <div class="Emergency_contact_inner ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="single_emergency">
+                            <div class="info">
+                                <span>Get Cost effective and accurate predictions</span>
+                                <h3>Your E-Medical Reports</h3>
+                            </div>
+                            <div class="info_button">
+                                <a href="{{ url_for('home', _anchor='contact_us_section') }}" class="boxed-btn3-white">Contact US
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single_emergency align-items-center d-flex justify-content-end">
+                            <div class="icon">
+                                <i class="flaticon-call"></i>
+                            </div>
+                            <div class="info">
+                                <span>Emergency Medical Care</span>
+                                <h3>+1-465 4545</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Emergency_contact end -->
+
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="./static/img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">An interactive platform to aid <br> patients to get their scans' reports <br> easily using AI and ML.
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Our Services
+                            </h3>
+                            <ul class="links">
+                                <li><a href="{{ url_for('service') }}" >Alzheimer</a></li>
+                                <li><a href="{{ url_for('service') }}" >Breast Cancer</a></li>
+                                <li><a href="{{ url_for('service') }}" >Diabetic Retinopathy</a></li>
+                                <li><a href="{{ url_for('service') }}" >Melanoma Cancer</a></li>
+                                <li><a href="{{ url_for('service') }}" >Pneumonia</a></li>
+                                <li><a href="{{ url_for('service') }}" >Liver Disease Detection</a></li>
+                                <li><a href="{{ url_for('service') }}" ></a>Heart Disease Detection</li>
+                                <li><a href="{{ url_for('service') }}" >Color Blindness</a></li>
+                                <li><a href="{{ url_for('service') }}" >Skin Cancer</a></li>
+                                <li><a href="{{ url_for('service') }}" >More tests</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4  col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                We’re Available
+                            </h3>
+                            <ul class="meting_time">
+                                <li class="d-flex justify-content-between "><span>Monday - Friday</span> <span>8.00 - 18.00</span></li>
+                                <li class="d-flex justify-content-between "><span>Saturday  </span> <span>8.00 - 18.00</span></li>
+                                <li class="d-flex justify-content-between "><span>Sunday</span> <span>8.00 - 13.00</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+    <script src="{{url_for('static', filename='js/vendor/modernizr-3.5.0.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/ajax-form.js')}}"></script>
+    <script src="{{url_for('static', filename='js/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.counterup.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/scrollIt.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.scrollUp.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/wow.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/nice-select.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.slicknav.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/plugins.js')}}"></script>
+    <script src="{{url_for('static', filename='js/gijgo.min.js')}}"></script>
+    <!--contact js-->
+    <script src="{{url_for('static', filename='js/contact.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.form.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.validate.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/mail-script.js')}}"></script>
+
+  <!-- Template Main JS File -->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <script>
+        $('.datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-calendar"></span>'
+            }
+        });
+
+        $('.timepicker').timepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-clock-o"></span>'
+            }
+        });
+    $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+    });
+    </script>
+</body>
+
+</html>
+
+
+<style>
+  .hover_effect:hover{
+    transform: scale(1.08); 
+    color: white;
+    background: #0575E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+}  
+
+<style type="text/css" media="screen">
+a:hover { color:#fff; text-decoration: none; }
+</style>
+
+</style>

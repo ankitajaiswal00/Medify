@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block thead %}Color Blindness Test{% endblock thead %}
+
+{% block content %} 
+
+<div class="whole-wrap">
+    <div class="container box 1170">
+        <div class="section-top-border">
+                <h1 class="mb-30"><span>Quick Updates on Color Blindness</span></h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{url_for('static', filename='img/experts/color.jpg')}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20">
+                        <p><strong><span>The Ishihara test is a color perception test for red-green color deficiencies, the first in a class of successful color vision tests called pseudo-isochromatic plates ("PIP"). It was named after its designer, Shinobu Ishihara, a professor at the University of Tokyo, who first published his tests in 1917.</span>The test consists of a number of colored plates, called Ishihara plates, each of which contains a circle of dots appearing randomized in color and size. Within the pattern are dots which form a number or shape clearly visible to those with normal color vision, and invisible, or difficult to see, to those with a red-green color vision defect. Other plates are intentionally designed to reveal numbers only to those with a red-green color vision deficiency, and be invisible to those with normal red-green color vision. </strong><br><strong><h4>This test is for informational purposes only. If you believe you may have a color vision deficiency please consult an eye care professional.</h4> </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container" style="margin: 10rem">
+    <!-- form itself end-->
+    <form action="/services/eye_test" method="POST" enctype="multipart/form-data">
+        <div class="popup_box">
+            <div class="popup_inner">
+                <h3><span>Get your Eyes Tested</span></h3>
+                    <div class="row">
+                        <div class="col-xl-6">
+                    		{% for imgs in test_imgs %}
+                        		<div class="container" style="padding: 2rem; background-color: #212121; width:300px; height: 300px">
+                                	<img src="{{url_for('display_test_imgs', test_imgs = imgs )}}">
+                            	</div>
+                            	<input type="number" name="{{ test_imgs }}" alt="{{ test_imgs }}">
+                        
+                    		{% endfor %}
+                    	</div>
+                    </div>
+                    <button type="submit" id="singlebutton" value="submit" class="boxed-btn-3">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>   	
+
+
+
+
+<div class="container">
+    <div style="margin: auto; padding: 2rem; background-color: #DC143C; width: 1000px">
+        <p style="font-size: 1.5rem; color: white;">
+            <span style="font-size: 2rem; font-weight: 600;"> Result: </span>
+            Yours eyes see it Right!
+        </p>
+    </div>
+</div>
+
+<br>
+<br>
+
+{% endblock content %}

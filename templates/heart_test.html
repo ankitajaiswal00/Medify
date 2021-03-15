@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block thead %}Heart Disease Detection{% endblock thead %}
+
+{% block content %} 
+
+<div class="whole-wrap">
+    <div class="container box 1170">
+        <div class="section-top-border">
+                <h1 class="mb-30"><span>Quick Updates on Heart Diseases</span></h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{url_for('static', filename='img/experts/heart.jpg')}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20">
+                        <p><strong>Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart defects), among others.<br>Heart diseases are the number 1 cause of death globally, taking an estimated 17.9 million lives each year. One third of these deaths occur prematurely in people under 70 years of age.Cardiovascular diseases (CVDs) are a group of disorders of the heart and blood vessels, including coronary heart disease, cerebrovascular disease, peripheral arterial disease, rheumatic heart disease, congenital heart disease, deep vein thrombosis and pulmonary embolism. An estimated 17.9 million people died from CVDs in 2016, representing 31% of all global deaths. Of these deaths, 85% were due to heart attack and stroke.</strong><br><strong><h4>We have developed a machine-learning model that will require the patient to fill some basic inputs and the users would get to know if they have a healthy heart or not?</h4> </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container" style="margin: 10rem">
+    <!-- form itself end-->
+    <form action="/services/heart_test" method="POST" enctype="multipart/form-data">
+        <div class="popup_box">
+            <div class="popup_inner">
+                <h3><span>
+                    Get your Heart Tested</span>
+                </h3>
+                    <div class="row">
+                        <div class="col-xl-9">
+                            <input type="number"  placeholder="Patient Age" id="age" name="age" required="required" />
+                        </div>
+                        <div class="col-xl-12">
+
+                            <select class="form-select wide" id="default-select" name="sex" required="required" />
+                                <option selected="selected" disabled="disabled"> Patient Gender</option>
+                                <option value="0" >Female</option>
+                                <option value="1" >Male</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-12">
+                            <select class="form-select wide" id="default-select" name="cp" required="required" >
+                                <option selected="selected" disabled="disabled" >Chest Pain- severity level </option> s
+                                <option value="0" >Asymptomatic</option>
+                                <option value="1" >Atypical Angina</option>
+                                <option value="2" >Non-Anginal Pain</option>
+                                <option value="3" >Typical Angina </option>
+                            </select>
+                        </div>
+                        <div class="col-xl-12">
+                            <input type="number" placeholder="resting blood pressure (in mm Hg on admission to the hospital)" name="trestbps" required="required" />
+                        </div>
+                        <div class="col-xl-9">
+                            <input type="number"  placeholder="Serum Choestrol in mg/dle" name="chol" required="required" />
+                        </div>
+                        <div class="col-xl-12">
+                            <select class="form-select wide" id="default-select" name="fbs" required="required" >
+                                <option   selected="selected" disabled="disabled"> Fasting BLood Sugar </option>
+                                <option value="0" >Less than 120 mg/dl</option>
+                                <option value="1" >More than 120 mg/dl</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-12">
+                            <select class="form-select wide" id="default-select" name="restecg" required="required" >
+                                <option   selected="selected" disabled="disabled">Resting Electrographic Results</option>
+                                <option value="0">Normal</option>
+                                <option value="1">ST-T wave with abnormality</option>
+                                <option value="2">Definite/ probable left ventricular hypertrophy</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-9">
+                            <input type="number" placeholder="Maximum Heart Rate Achieved" name="thalach" required="required" />
+                        </div>
+                        <div class="col-xl-12">
+                            <select class="form-select wide" id="default-select" name="exang" required="required" >
+                                <option  disabled="disabled" selected="selected"> Exercise Induced Angina </option>
+                                <option value="0" >No</option>
+                                <option value="1" >Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-9">
+                            <input type="number" step="0.01" placeholder="ST depression induced by exercise relative to rest" name="oldpeak" required="required" />
+                        </div>
+                        <div class="col-xl-12">
+                            <select class="form-select wide" id="default-select" name="slope" required="required" >
+                                <option disabled="disabled" selected="selected"> Slope value of the peak exercise ST segment </option>
+                                <option value="0" >Upsloping</option>
+                                <option value="1" >Flat</option>
+                                <option value="2" >Downsloping</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-12">
+                            <select class="form-select wide" id="default-select" name="ca" required="required">
+                                <option selected="selected" disabled="disabled"> number of major vessels (0-3) colored by flourosopy </option>
+                                <option value="0" >0</option>
+                                <option value="1" >1</option>
+                                <option value="2" >2</option>
+                                <option value="3" >3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-xl-12">
+                            <button type="number" value="111" id="singlebutton" name="GO" class="boxed-btn3">Submit</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </form>
+    <!-- form itself end -->
+</div>
+
+{% if predicted==True %}
+
+
+<div class="container" style="margin: 10rem">
+    <div style="margin: auto; padding: 2rem; background-color: #DC143C; width: 1000px">
+        <p style="font-size: 1.5rem; color: white";>
+            <span style="font-size: 2rem; font-weight: 600; "> Result: </span>
+            {{ prediction_text }}
+        </p>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+{% endif %}
+
+{% endblock content %}

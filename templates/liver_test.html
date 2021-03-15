@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block thead %}Liver Disease Detection{% endblock thead %}
+
+{% block content %} 
+
+<div class="whole-wrap">
+    <div class="container box 1170">
+        <div class="section-top-border">
+                <h1 class="mb-30"><span>Quick Updates on Liver Diseases</span></h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{url_for('static', filename='img/experts/liver.jpg')}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20">
+                        <p><strong><span>Liver disease can be inherited (genetic) or caused by a variety of factors that damage the liver, such as viruses and alcohol use. Obesity is also associated with liver damage. Over time, damage to the liver results in scarring (cirrhosis), which can lead to liver failure, a life-threatening condition.<br>According to the latest WHO data published in 2017 Liver Disease Deaths in India reached 259,749 or 2.95% of total deaths. The age adjusted Death Rate is 22.93 per 100,000 of population ranks India #63 in the world. </span></strong><br><strong><h4>We propose to implement a machine-learning model that will require the patient to fill some basic inputs and the users would get to know if they have a healthy liver or not</h4> </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container" style="margin: 10rem">
+    <!-- form itself end-->
+    <form action="/services/liver_test" method="POST" enctype="multipart/form-data">
+        <div class="popup_box">
+            <div class="popup_inner">
+                <h3>
+                    Get your Liver 
+                <span>Tested</span>
+                </h3>
+                    <div class="row">
+                        <div class="col-xl-9">
+                            <input type="number"  placeholder="Patient Age" id="age" name="age" required="required" />
+                        </div>
+                        <div class="col-xl-12">
+                            <select class="form-select wide" id="default-select" name="gender" required="required" />
+                                <option data-display="Patient Gender" disabled="disabled">Gender</option>
+                                <option value="1">Female</option>
+                                <option value="2">Male</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-6">
+                            <input type="number" step="0.01"  placeholder="total_bilirubin" name="total_bil" required="required" />
+                        </div>
+                        <div class="col-xl-6">
+                            <input type="number" step="0.01"  placeholder="direct_bilirubin" name="direct_bil" required="required" />
+                        </div>
+                        <div class="col-xl-9">
+                            <input type="number" step="0.01"  placeholder="alkaline_phosphotase" name="alkaline_phos" required="required" />
+                        </div>
+                        <div class="col-xl-9">
+                            <input type="number" step="0.01" name="alamine_amino" placeholder="alamine_amino" required="required" />
+                        </div>
+                         <div class="col-xl-9">
+                            <input type="number" step="0.01" name="aspartate_amino" placeholder="aspartate_amino" required="required" />
+                        </div>
+                        <div class="col-xl-9">
+                            <input type="number" step="0.01" name="total_proteins" placeholder="Total_proteins" required="required" />
+                        </div>
+                        <div class="col-xl-9">
+                            <input type="number" step="0.01" name="albumin" placeholder="Albumin" required="required" />
+                        </div>
+                         <div class="col-xl-9">
+                            <input type="number" step="0.01" name="albumin_and_globin" placeholder="Albumin and Globin" required="required" />
+                        </div>
+                        <div class="col-xl-12">
+                            <button type="submit" id="singlebutton" name="GO" value="submit" class="boxed-btn3">Submit</button>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </form>
+    <!-- form itself end -->
+</div>
+
+{% if predicted==True %}
+
+<div class="container">
+    <div style="margin: auto; padding: 2rem; background-color: #DC143C; width: 1000px">
+        <p style="font-size: 1.5rem; color: white;">
+            <span style="font-size: 2rem; font-weight: 600;"> Result: </span>
+            {{ prediction_text }}
+        </p>
+    </div>
+</div>
+
+<br>
+<br>
+
+{% endif %}
+
+{% endblock content %}

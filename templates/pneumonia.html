@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block thead %}Pneumonia{% endblock thead %}
+
+{% block content %} 
+
+<div class="whole-wrap">
+    <div class="container box 1170">
+        <div class="section-top-border">
+                <h1 class="mb-30"><span>Quick Updates on Pneumonia</span></h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{url_for('static', filename='img/experts/pneumonia.jpg')}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20">
+                        <p><strong><span>Pneumonia is an infection of the lungs with a range of possible causes. It can be a serious and life-threatening disease. It normally starts with a bacterial, viral, or fungal infection. Pneumonia can occur in young and healthy people, but it is most dangerous for older adults, infants, people with other diseases, and those with impaired immune systems.<br>Fifty percent of the world’s pneumonia deaths occur in India which means approximately 3.7 lakh children die of pneumonia annually in India. India’s under-five death toll is higher than the deaths in Nigeria, Congo and Pakistan put together. 
+                        </strong><br><strong><h4>We propose to implement a deep-learning framework that will take the lungs Scans to predict the results.</h4> </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container" style="margin: 10rem">
+    <h1 style="margin: auto; font-weight: 600; text-align: center;">Upload Image</h1>
+    <div style="width: 85%; margin: auto;">
+        <form action="/services/pneumonia" method="POST" enctype="multipart/form-data">
+            <label class="form-label" for="image">Choose Image</label>
+            <input type="file" class="form-control" name="image" id="image" />
+            <button type="submit" id="singlebutton" name="singlebutton" class="new-btn-d" style="background-color: grey;margin: auto; padding:0.5rem" type="submit">Upload Image</button>
+        </form>
+    </div>
+</div>
+
+{% if predicted==True %}
+
+<div class="container">
+    <div style="margin: auto; padding: 2rem; background-color: #6495AD; width: 1000px;">
+        <p style="font-size: 1.5rem;">
+            <span style="font-size: 2rem; font-weight: 600; color: white;"> Result: </span>
+            {% for data in supplied_text %}
+                <br>
+                <li><h3 style="color: white;">{{data}} : {{supplied_text[data]}}</h3> </li>
+            {% endfor %}
+        </p>
+    </div>
+</div>
+<br>
+<br>
+{% endif %}
+
+{% endblock content %}

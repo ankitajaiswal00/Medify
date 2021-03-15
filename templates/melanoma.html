@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block thead %} Melanoma {% endblock thead %}
+
+{% block content %} 
+<div class="whole-wrap">
+    <div class="container box 1170">
+        <div class="section-top-border">
+                <h1 class="mb-30"><span>Quick Updates on Melanoma</span></h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{url_for('static', filename='img/experts/skin.jpg')}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20">
+                        <p><strong><span>Melanoma of the skin is the 19th most commonly occurring cancer in men and women. There were nearly 300,000 new cases in 2018. Benign skin cancer is the 5th most commonly occurring cancer in men and women, with over 1 million diagnoses worldwide in 2018, although this is likely to be an underestimate. <br>Skin cancer is an abnormal growth of skin cells. It generally develops in areas that are exposed to the sun, but it can also form in places that don’t normally get sun exposure. There are two main types of skin cancer: melanoma and non-melanoma. The most common non-melanoma tumours are basal cell carcinoma and squamous cell carcinoma.
+                        </strong><br><strong><h4>We have implemented a deep-learning framework that will take the patient image to predict the results.</h4> </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container" style="margin: 10rem">
+    <h1 style="margin: auto; font-weight: 600; text-align: center;">Upload Image</h1>
+    <div style="width: 85%; margin: auto;">
+        <form action="/services/melanoma" method="POST" enctype="multipart/form-data">
+            <label class="form-label" for="image">Choose Image</label>
+            <input type="file" class="form-control" name="image" id="image" />
+            <button type="submit" id="singlebutton" name="singlebutton" class="new-btn-d" style="background-color: grey;margin: auto; padding:0.5rem" type="submit">Upload Image</button>
+        </form>
+    </div>
+</div>
+
+{% if predicted==True %}
+
+<div class="container">
+    <div style="margin: auto; padding: 2rem; background-color: #DC143C; width: 1000px;">
+        <p style="font-size: 1.5rem; color: white;">
+            <span style="font-size: 2rem; font-weight: 600; color: white;"> Result: </span>
+            <ul>
+            {% for data in supplied_text %}
+                <br>
+                <li><h4 style="color: white;">{{data}} : {{supplied_text[data]}}</h4> </li>
+            {% endfor %}
+            </ul>
+        </p>
+    </div>
+</div>
+<br>
+<br>
+
+{% endif %}
+
+{% endblock content %}

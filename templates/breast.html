@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block thead %}Breast Cancer{% endblock thead %}
+
+{% block content %} 
+<div class="whole-wrap">
+    <div class="container box 1170">
+        <div class="section-top-border">
+                <h1 class="mb-30"><span>Quick Updates  on Breast Cancer's</span></h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{url_for('static', filename='img/experts/bs.jpg')}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20">
+                        <p><strong><span>Among women, breast cancer is the most common cancer and the second most common cause of cancer deaths. It has the second highest mortality rate in women next to lung cancer. As per clinical statistics, 1 in every 8 women is diagnosed with breast cancer in their lifetime. However, periodic clinical checkups and self-tests help in early detection and thereby significantly increase the chances of survival. Invasive detection techniques cause rupture of the tumor, accelerating the spread of cancer to adjoining areas. Hence, there arises the need for a more robust, fast, accurate, and efficient noninvasive cancer detection system
+                        </strong><br><strong><h4>We have developed a deep-learning framework that will take the Mammogram Scans to predict the results.</h4> </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container" style="margin: 10rem">
+    <h1 style="margin: auto; font-weight: 600; text-align: center;">Upload Image</h1>
+    <div style="width: 85%; margin: auto;">
+        <form action="/services/breast" method="POST" enctype="multipart/form-data">
+            <label class="form-label" for="image">Choose Image</label>
+            <input type="file" class="form-control" name="image" id="image" />
+            <button type="submit" id="singlebutton" name="singlebutton" class="new-btn-d" style="background-color: grey;margin: auto; padding:0.5rem" type="submit">Upload Image</button>
+        </form>
+    </div>
+</div>
+
+{% if predicted==True %}
+
+
+<div class="container">
+    <div style="margin: auto; padding: 2rem; background-color: #DC143C; width: 1000px; ">
+        <p style="font-size: 1.5rem; color: white;">
+            <span style="font-size: 2rem; font-weight: 600; color: white;"> Result: </span>
+            {% for data in supplied_text %}
+                <br>
+                <li><h3 style="color: white;">{{data}} : {{supplied_text[data]}}</h3> </li>
+            {% endfor %}
+        </p>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+{% endif %}
+
+{% endblock content %}

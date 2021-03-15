@@ -1,0 +1,512 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>E-Medical</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="./static/img/favicon.png">
+    <!-- Place favicon".ico in the root directory -->
+
+    <!-- CSS here -->
+    <link href="{{url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/themify-icons.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/nice-select.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/flaticon.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/gijgo.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/animate.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/slicknav.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/style.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+<!-- header-start -->
+<header>
+  <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo-img">
+                                <a href="{{ url_for('home') }}" target="_blank">HOME</a>
+                                    <img src="./static/img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="menu_wrap d-none d-lg-block">
+                                <div class="menu_wrap_inner d-flex align-items-center justify-content-end">
+                                    <div class="main-menu">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a href="{{ url_for('home') }}" target="_blank">HOME</a></li>
+                                                <li><a href="{{ url_for('home', _anchor='about_us_section') }}" target="_blank">ABOUT US</a></li>
+                                                <li><a href="{{ url_for('blog') }}" target="_blank">BLOG</a></li>
+                                                <li><a href="{{ url_for('service') }}" target="_blank">SERVICES</a></li>
+                                                <li><a href="{{ url_for('home', _anchor='contact_us_section') }}" target="_blank">CONTACT US</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>    
+    <!-- header-end -->
+  
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>blog</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+
+    <!--================Blog Area =================-->
+    <section class="blog_area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="blog_left_sidebar">
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="https://miro.medium.com/max/700/1*mxvh2cL_wXMpf6dWLMsLEg.jpeg" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="https://medium.com/@deepakvraghavan/practical-uses-of-deep-neural-networks-in-healthcare-934ce1783999">
+                                    <h2>Practical uses of Deep Neural Networks in Healthcare</h2>
+                                </a>
+                                <p>The topic of this article is to take a look at how advances in Big Data, Machine Learning, Cloud Computing, and medical science have completely disrupted the Healthcare industry.</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> AI in Healthcare, Research</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="https://miro.medium.com/max/700/1*gvQvsz93ka_2BSpQEwulDg.png" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="single-blog.html">
+                                    <h2>Applications of artificial neural networks in health care organizational decision-making: A scoping review</h2>
+                                </a>
+                                <p>Health care organizations are leveraging machine-learning techniques, such as artificial neural networks (ANN), to improve delivery of care at a reduced cost. Applications of ANN to diagnosis are well-known; however, ANN are increasingly used to inform health care management decisions. </p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> AI in Healthcare, Research</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="https://miro.medium.com/max/700/1*SiqCW-rZlHstl0HMva0taw.png" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="https://www.sciencedirect.com/science/article/pii/S0939388918301181">
+                                    <h2>An overview of deep learning in medical imaging focusing on MRI</h2>
+                                </a>
+                                <p>Our aim is threefold: (i) give a brief introduction to deep learning with pointers to core references; (ii) indicate how deep learning has been applied to the entire MRI processing chain, from acquisition to image retrieval, from segmentation to disease prediction; (iii) provide a starting point for people interested in experimenting and perhaps contributing to the field of deep learning for medical imaging by pointing out good educational resources, state-of-the-art open-source code, and interesting sources of data and problems related medical imaging.</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> AI in Healthcare, Research</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="https://miro.medium.com/max/1954/1*si0MzTn9sim_jJTaStEAmQ.png" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="https://towardsdatascience.com/medical-diagnosis-with-a-convolutional-neural-network-ab0b6b455a20">
+                                    <h2>Medical Diagnosis with a Convolutional Neural Network</h2>
+                                </a>
+                                <p>In 2018 the United States Food and Drug Administration approved the use of a medical device using a form of artificial intelligence called a convolutional neural network to detect diabetic retinopathy in diabetic adults (WebMD, April 2018).</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> AI in Healthcare, Research</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <i class="ti-angle-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <form action="#">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder='Search Keyword'
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Search Keyword'">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="button"><i class="ti-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                    type="submit">Search</button>
+                            </form>
+                        </aside>
+
+                        <aside class="single_sidebar_widget post_category_widget">
+                            <h4 class="widget_title">Category</h4>
+                            <ul class="list cat-list">
+                                <li>
+                                    <a href="#" class="d-flex">
+                                        <p>Convolutional Neural Networks</p>
+                                        <p>(37)</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex">
+                                        <p>Machine Learning</p>
+                                        <p>(10)</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex">
+                                        <p>Modern technology</p>
+                                        <p>(03)</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex">
+                                        <p>HealthCare</p>
+                                        <p>(11)</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex">
+                                        <p>Wearables</p>
+                                        <p>21</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex">
+                                        <p>Smart Devices (21)</p>
+                                        <p>09</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </aside>
+
+                        <aside class="single_sidebar_widget popular_post_widget">
+                            <h3 class="widget_title">Recent Post</h3>
+                            <div class="media post_item">
+                                <img src="./static/img/post/post_1.png" alt="post">
+                                <div class="media-body">
+                                    <a href="single-blog.html">
+                                        <h3>Top 5 Smart Wearables</h3>
+                                    </a>
+                                    <p>January 12, 2019</p>
+                                </div>
+                            </div>
+                            <div class="media post_item">
+                                <img src="./static/img/post/post_2.png" alt="post">
+                                <div class="media-body">
+                                    <a href="single-blog.html">
+                                        <h3>Top 5 Hollywood Sci-Fi</h3>
+                                    </a>
+                                    <p>02 Hours ago</p>
+                                </div>
+                            </div>
+                            <div class="media post_item">
+                                <img src="./static/img/post/post_3.png" alt="post">
+                                <div class="media-body">
+                                    <a href="single-blog.html">
+                                        <h3>Covid Vaccines</h3>
+                                    </a>
+                                    <p>03 Hours ago</p>
+                                </div>
+                            </div>
+                            <div class="media post_item">
+                                <img src="./static/img/post/post_4.png" alt="post">
+                                <div class="media-body">
+                                    <a href="single-blog.html">
+                                        <h3>Vaccination Program</h3>
+                                    </a>
+                                    <p>02 Hours Ago </p>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside class="single_sidebar_widget tag_cloud_widget">
+                            <h4 class="widget_title">Tag Clouds</h4>
+                            <ul class="list">
+                                <li>
+                                    <a href="#">project</a>
+                                </li>
+                                <li>
+                                    <a href="#">AI</a>
+                                </li>
+                                <li>
+                                    <a href="#">technology</a>
+                                </li>
+                                <li>
+                                    <a href="#">Vaccine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Covid-19</a>
+                                </li>
+                                <li>
+                                    <a href="#">life style</a>
+                                </li>
+                                <li>
+                                    <a href="#">Health</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hospitals</a>
+                                </li>
+                            </ul>
+                        </aside>
+
+
+                        <aside class="single_sidebar_widget newsletter_widget">
+                            <h4 class="widget_title">Newsletter</h4>
+
+                            <form action="#">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+                                </div>
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                    type="submit">Subscribe</button>
+                            </form>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
+    <!-- Emergency_contact start -->
+    <div class="Emergency_contact">
+        <div class="Emergency_contact_inner ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="single_emergency">
+                            <div class="info">
+                                <span>Get Cost effective and accurate predictions</span>
+                                <h3>Your E-Medical Reports</h3>
+                            </div>
+                            <div class="info_button">
+                                <a href="{{ url_for('home', _anchor='contact_us_section') }}" class="boxed-btn3-white">Contact US
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single_emergency align-items-center d-flex justify-content-end">
+                            <div class="icon">
+                                <i class="flaticon-call"></i>
+                            </div>
+                            <div class="info">
+                                <span>Emergency Medical Care</span>
+                                <h3>+1-465 4545</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Emergency_contact end -->
+
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="./static/img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">An interactive platform to aid <br> patients to get their scans' reports <br> easily using AI and ML.
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Our Services
+                            </h3>
+                            <ul class="links">
+                                <li><a href="{{ url_for('service') }}" >Alzheimer</a></li>
+                                <li><a href="{{ url_for('service') }}" >Breast Cancer</a></li>
+                                <li><a href="{{ url_for('service') }}" >Diabetic Retinopathy</a></li>
+                                <li><a href="{{ url_for('service') }}" >Melanoma Cancer</a></li>
+                                <li><a href="{{ url_for('service') }}" >Pneumonia</a></li>
+                                <li><a href="{{ url_for('service') }}" >Liver Disease Detection</a></li>
+                                <li><a href="{{ url_for('service') }}" ></a>Heart Disease Detection</li>
+                                <li><a href="{{ url_for('service') }}" >Color Blindness</a></li>
+                                <li><a href="{{ url_for('service') }}" >Skin Cancer</a></li>
+                                <li><a href="{{ url_for('service') }}" >More tests</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4  col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                We’re Available
+                            </h3>
+                            <ul class="meting_time">
+                                <li class="d-flex justify-content-between "><span>Monday - Friday</span> <span>8.00 - 18.00</span></li>
+                                <li class="d-flex justify-content-between "><span>Saturday  </span> <span>8.00 - 18.00</span></li>
+                                <li class="d-flex justify-content-between "><span>Sunday</span> <span>8.00 - 13.00</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+
+    <!-- JS here -->
+    <script src="./static/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./static/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./static/js/popper.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/owl.carousel.min.js"></script>
+    <script src="./static/js/isotope.pkgd.min.js"></script>
+    <script src="./static/js/ajax-form.js"></script>
+    <script src="./static/js/waypoints.min.js"></script>
+    <script src="./static/js/jquery.counterup.min.js"></script>
+    <script src="./static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="./static/js/scrollIt.js"></script>
+    <script src="./static/js/jquery.scrollUp.min.js"></script>
+    <script src="./static/js/wow.min.js"></script>
+    <script src="./static/js/nice-select.min.js"></script>
+    <script src="./static/js/jquery.slicknav.min.js"></script>
+    <script src="./static/js/jquery.magnific-popup.min.js"></script>
+    <script src="./static/js/plugins.js"></script>
+    <script src="./static/js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="./static/js/contact.js"></script>
+    <script src="./static/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./static/js/jquery.form.js"></script>
+    <script src="./static/js/jquery.validate.min.js"></script>
+    <script src="./static/js/mail-script.js"></script>
+
+    <!-- <script src="js/main.js"></script> -->
+  <!-- Template Main JS File -->
+  <script src="./static/js/main.js"></script>
+    <script>
+        $('.datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-calendar"></span>'
+            }
+        });
+
+        $('.timepicker').timepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-clock-o"></span>'
+            }
+        });
+    $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+    </script>
+</body>
+</html>

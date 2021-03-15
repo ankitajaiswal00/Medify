@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block thead %}Diabetic Retinopathy{% endblock thead %}
+
+{% block content %} 
+
+<div class="whole-wrap">
+    <div class="container box 1170">
+        <div class="section-top-border">
+                <h1 class="mb-30"><span>Quick Updates on Retinal </span></h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{url_for('static', filename='img/experts/diabetic.jpg')}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20">
+                        <p><strong><span>Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces. Insulin is a hormone that regulates blood sugar.</span><br>Hyperglycaemia, or raised blood sugar, is a common effect of uncontrolled diabetes and over time leads to serious damage to many of the body's systems, especially the nerves and blood vessels. According to the World Health Organization (WHO), India had 69.2 million people living with diabetes in 2015.<br>India actually has the highest number of diabetics of any one country in the entire world. In 2016, diabetes was the direct cause of 1.6 million deaths and in 2012 high blood glucose was the cause of another 2.2 million deaths worldwide.</strong><h4>We have implemented a deep-learning framework that will take the patient retinal scan to predict if the person is diabetic or not.</h4> </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container" style="margin: 10rem">
+    <h1 style="margin: auto; font-weight: 600; text-align: center;">Upload Image</h1>
+    <div style="width: 85%; margin: auto;">
+        <form action="/services/aptos" method="POST" enctype="multipart/form-data">
+            <label class="form-label" for="image">Choose Image</label>
+            <input type="file" class="form-control" name="image" id="image" />
+            <button type="submit" id="singlebutton" name="singlebutton" class="new-btn-d" style="background-color: grey;margin: auto; padding:0.5rem" type="submit">Upload Image</button>
+        </form>
+    </div>
+</div>
+
+{% if predicted==True %}
+
+<div class="container">
+    <div style="margin: auto; padding: 2rem; background-color: #DC143C; width: 1000px;">
+        <p style="font-size: 1.5rem; color: white;">
+            <span style="font-size: 2rem; font-weight: 600; color: white;"> Result: </span>
+            {% for data in supplied_text %}
+                <br>
+                <li><h3 style="color: white;">{{data}} : {{supplied_text[data]}}</h3> </li>
+            {% endfor %}
+        </p>
+    </div>
+</div>
+<br>
+<br>
+{% endif %}
+
+{% endblock content %}

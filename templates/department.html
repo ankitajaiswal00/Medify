@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+
+<body>
+
+
+{% block content %}
+
+
+{% block thead %} Our Services {% endblock thead %}
+
+    <!-- depertment_area_start  -->
+    <div class="depertment_area">
+        <div class="container">
+            <div class="row custom_align align-items-end justify-content-between">
+                <div class="col-lg-6">
+                    <div class="section_title">
+                        <h3><span>Our Services</span></h3>
+                        <p><strong>Through our project, we attempt to built a modern pathology center to detect and predict a diseases and cancers. Identifying the right diagnosis for a given person at the earliest is one of the fundamental problems in healthcare faced by healthcare providers.</strong></p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="learn_more_btn text-right">
+                        <a href="{{url_for('service')}}" class="boxed-btn">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="quality_area">
+            <div class="row">
+                <a href="{{url_for('alzheimersdetection')}}" class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-customer-service"></i>
+                        </div>
+                        <h3>Alzheimer</h3>
+                        <p>Upload your MRI Scan and get your result. </p>
+                    </div>
+                    </div>
+                </a>
+                <a href="{{url_for('breast')}}" class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-find"></i>
+                        </div>
+                        <h3>Breast Cancer</h3>
+                        <p>Upload your ultrasound images</p>
+                    </div>
+                    </div>
+                </a>
+                <a href="{{url_for('aptos')}}" class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-doctor"></i>
+                        </div>
+                        <h3>Diabetic Retinopathy</h3>
+                        <p>Upload your retina image and get the severity of diabetic retinopathy.</p>
+                    </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="row">
+                <a href="{{url_for('melanoma')}}" class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-customer-service"></i>
+                        </div>
+                        <h3>Melanoma Cancer</h3>
+                        <p>Upload your dermoscopic scan and get which cancer is it likely to be!</p>
+                    </div>
+                    </div>
+                </a>
+                <a href="{{url_for('pneumonia')}}" class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-find"></i>
+                        </div>
+                        <h3>Pneumonia</h3>
+                        <p>Upload your lungs X-Rays and get results.</p>
+                    </div>
+                    </div>
+                </a>
+                <a href="{{url_for('liver')}}"  class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-doctor"></i>
+                        </div>
+                        <h3>Liver Disease Detection</h3>
+                        <p>Basic Inputs and Outputs.</p>
+                    </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="row">
+                <a href="{{url_for('heart')}}" class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-customer-service"></i>
+                        </div>
+                        <h3>Heart Disease Detection</h3>
+                        <p>Upload your dermoscopic scan and get which cancer is it likely to be!</p>
+                    </div>
+                    </div>
+                </a>
+                <a href="{{url_for('ColorBlind')}}"  class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-doctor"></i>
+                        </div>
+                        <h3>Color Blindness</h3>
+                        <p>Basic Inputs and Outputs.</p>
+                    </div>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-find"></i>
+                        </div>
+                        <h3>More Tests</h3>
+                        <p>loading Soon!</p>
+                    </div>
+                    </div>
+                </a>
+            </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="depart_ment_tab mb-30">
+                        <ul class="nav" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                                    <i class="flaticon-doctor"></i>
+                                    <h4>Check Up</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                                    <i class="flaticon-cardiovascular"></i>
+                                    <h4>Cardiology</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                                    <i class="flaticon-ear"></i>
+                                    <h4>ENT Specialists</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Astrology-tab" data-toggle="tab" href="#Astrology" role="tab" aria-controls="contact" aria-selected="false">
+                                    <i class="flaticon-bone"></i>
+                                    <h4>Cancer</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Neuroanatomy-tab" data-toggle="tab" href="#Neuroanatomy" role="tab" aria-controls="contact" aria-selected="false">
+                                    <i class="flaticon-lung"></i>
+                                    <h4>Neuroanatomy</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Blood-tab" data-toggle="tab" href="#Blood" role="tab" aria-controls="contact" aria-selected="false">
+                                    <i class="flaticon-cell"></i>
+                                    <h4>Blood Screening</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dept_main_info white-bg">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <!-- single_content  -->
+                        <div class="row align-items-center">
+                            <div class="col-lg-5">
+                                <div class="dept_thumb">
+                                    <img src="./static/img/experts/medify.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="dept_info">
+                                    <h1><span>Why MEDIFY.AI ?</span></h1 >
+                                    <p><strong>Physical access to hospitals and lack of certified medical practioners is still the major barrier to both preventive and curative health services, and also the major differences between Rural and Urban India. Besides, affordability of medical expenditures is one of the biggest problems faced by patients. The challenge here is that a trained human eye of a medical professional cannot identify subtle signs on these tests.</strong> </p>
+                                    <a href="{{url_for('service')}}" class="boxed-btn">Test it Right Now.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single_content  -->
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- depertment_area_end  -->
+{% endblock content %}
+
+
+</body>
+
+</html>
+
+
+<style>
+  .hover_effect:hover{
+    transform: scale(1.05); 
+    color: white;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+}  
+
+</style>

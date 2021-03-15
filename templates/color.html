@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block thead %}Color Blindness Test{% endblock thead %}
+
+{% block content %} 
+
+<div class="whole-wrap">
+    <div class="container box 1170">
+        <div class="section-top-border">
+                <h1 class="mb-30"><span>Quick Updates on Color Blindness</span></h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{url_for('static', filename='img/experts/color.jpg')}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20">
+                        <p><strong><span>The Ishihara test is a color perception test for red-green color deficiencies, the first in a class of successful color vision tests called pseudo-isochromatic plates ("PIP"). It was named after its designer, Shinobu Ishihara, a professor at the University of Tokyo, who first published his tests in 1917.</span>The test consists of a number of colored plates, called Ishihara plates, each of which contains a circle of dots appearing randomized in color and size. Within the pattern are dots which form a number or shape clearly visible to those with normal color vision, and invisible, or difficult to see, to those with a red-green color vision defect. Other plates are intentionally designed to reveal numbers only to those with a red-green color vision deficiency, and be invisible to those with normal red-green color vision. </strong><br><strong><h4>This test is for informational purposes only. If you believe you may have a color vision deficiency please consult an eye care professional.</h4> </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container" style="margin: 10rem">
+  <div class="jumbotron" style="align-items: center;">
+    <form action="/services/eye_test" method="POST" enctype="multipart/form-data">
+         <h1 style="text-align: center;"><span>Get your Eyes Tested</span></h1> <br>
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="container" style="padding: 2rem; background-color: #212121; width:300px; height: 300px">
+                        <img src="{{url_for('static', filename = 'color_blind/t1.jpg' )}}">
+                    </div> <br>
+                    <center><input class="tbx" type="number" name="t1"></center>
+                </div>
+                <div class="col-xl-4">
+                    <div class="container" style="padding: 2rem; background-color: #212121; width:300px; height: 300px">
+                        <img src="{{url_for('static', filename = 'color_blind/t2.jpg' )}}">
+                    </div> <br>
+                    <center><input class="tbx" type="number" name="t2"></center>
+                </div>
+                <div class="col-xl-4">
+                    <div class="container" style="padding: 2rem; background-color: #212121; width:300px; height: 300px">
+                        <img src="{{url_for('static', filename = 'color_blind/t3.jpg' )}}">
+                    </div> <br>
+                    <center><input class="tbx" type="number" name="t3"></center>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="container" style="padding: 2rem; background-color: #212121; width:300px; height: 300px">
+                        <img src="{{url_for('static', filename = 'color_blind/t4.jpg' )}}">
+                    </div> <br>
+                    <center><input class="tbx" style="align-items: center;" type="number" name="t4"></center>
+                </div>
+                <div class="col-xl-4">
+                    <div class="container" style="padding: 2rem; background-color: #212121; width:300px; height: 300px">
+                        <img src="{{url_for('static', filename = 'color_blind/t5.jpg' )}}">
+                    </div> <br>
+                    <center><input class="tbx" type="number" name="t5"></center>
+                </div>
+                <div class="col-xl-4">
+                    <div class="container" style="padding: 2rem; background-color: #212121; width:300px; height: 300px">
+                        <img src="{{url_for('static', filename = 'color_blind/t6.jpg' )}}">
+                    </div> <br>
+                    <center><input class="tbx" type="number" name="t6"></center>
+                </div>
+                <div>
+                    <button type="submit" class="btxx" id="singlebutton" value="submit" class="boxed-btn-3">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>   	
+
+
+
+{% if predicted==True %}
+
+<div class="container">
+    <div style="margin: auto; padding: 2rem; background-color: #DC143C; width: 1000px">
+        <p style="font-size: 1.5rem; color: white;">
+            <span style="font-size: 2rem; font-weight: 600;"> Result: </span>
+            {{ prediction_text }}
+            <br> Your Score is {{ score }} / 6.
+        </p>
+    </div>
+</div>
+
+{% endif %}
+
+<br>
+<br>
+
+<style>
+  .tbx {
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  height: 42px;
+}
+.btxx {
+    height: 42px;
+    align-items: center;
+
+}
+
+.jumbotron {
+    box-shadow: 100px black; 
+}
+
+
+</style>
+
+{% endblock content %}
+

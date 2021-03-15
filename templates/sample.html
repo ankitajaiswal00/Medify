@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+{% if not begin %}
+	{% for imgs in test_imgs %}
+		<img src="{{url_for('display_test_imgs', test_imgs = imgs )}}">
+		
+		<br>
+	{% endfor %}
+
+{% endif %}
+
+</body>
+</html>

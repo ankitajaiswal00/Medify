@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>E-Medical</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="./static/img/favicon.png">
+    <!-- Place favicon".ico in the root directory -->
+
+    <!-- CSS here -->
+    <link href="{{url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/themify-icons.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/nice-select.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/flaticon.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/gijgo.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/animate.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/slicknav.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'css/style.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<header>
+  <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="logo-img">
+                            <a href="{{ url_for('home') }}" target="_blank" >HOME</a>
+                                <img src="./static/img/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="menu_wrap d-none d-lg-block">
+                            <div class="menu_wrap_inner d-flex align-items-center justify-content-end">
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="{{ url_for('home') }}" target="_blank">HOME</a></li>
+                                            <li><a href="#about_us_section">ABOUT US</a></li>
+                                            <li><a href="{{ url_for('blog') }}" target="_blank">BLOG</a></li>
+                                            <li><a href="{{ url_for('service') }}" target="_blank">SERVICES</a></li>
+                                            <li><a href="#contact_us_section" target="_blank">CONTACT US</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                                <h3>A <span>HEALTHY</span> tomorrow is a<br> 
+                                <span>BETTER</span> tomorrow.</h3>
+                                <a href="{{url_for('blog')}}" class="boxed-btn5">Discover More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+   <!-- welcome_clicnic_area_start -->
+    <div class="welcome_clicnic_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="welcome_thumb">
+                        <div class="thumb_1">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <img src="./static/img/experts/doc1.jpg" width="120%" height="150%" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="welcome_docmed_info">
+                        <h3>Welcome To <span>MEDIFY.AI</span></h3>
+                        <p> <strong> Artificial intelligence simplifies the lives of patients, doctors and hospital administrators by performing tasks that are typically done by humans, but in less time and at a fraction of the cost. Through our project, we attempt to built a modern pathology center to detect and predict a diseases and cancers. Identifying the right diagnosis for a given person at the earliest is one of the fundamental problems in healthcare faced by healthcare providers. For certain diseases like Cancer, late diagnosis threatens the chances of survival and a healthy lifestyle and also increases treatment costs. At the end of the day, we all believe that the use of AI in HealthCare industry can impact milion lives positively to open gates for a better healthy future.</strong>
+                        </p>
+                        
+                        <a href="#about_us_sections" class="boxed-btn6">About us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- welcome_clicnic_area_end -->
+    <!-- quality_area_start  -->
+    <div class="quality_area">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-lg-6">
+                    <div class="section_title mb-55 text-center">
+                        <h3>Quality Health</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-customer-service"></i>
+                        </div>
+                        <h3><span>Quick prediction</span></h3>
+                        <p><strong>Our application can predict the disease within no time without compromising with the accuracy.</strong></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-find"></i>
+                        </div>
+                        <h3><span>Highly accurate</span></h3>
+                        <p><strong>The models are trained in such a way that the predictions do not get biased. All the important features are taken in care for making predictions.</strong></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="hover_effect">
+                    <div class="single_quality">
+                        <div class="icon">
+                            <i class="flaticon-doctor"></i>
+                        </div>
+                        <h3><span>Broad-spectrum</span></h3>
+                        <p><strong>This application can work on wide range of cancer and their stage prediction, and many diseases including alzeihmers and pneumonia etc.</strong></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- quality_areaend  -->
+
+
+    <!-- depertment_area_start  -->
+    <div class="depertment_area">
+        <div class="container">
+            <div class="row custom_align align-items-end justify-content-between">
+                <div class="col-lg-6">
+                    <div class="section_title">
+                        <h3><span>Our Services</span></h3>
+                        <p><strong>Through our project, we attempt to built a modern pathology center to detect and predict a diseases and cancers. Identifying the right diagnosis for a given person at the earliest is one of the fundamental problems in healthcare faced by healthcare providers.</strong></p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="learn_more_btn text-right">
+                        <a href="{{url_for('service')}}" class="boxed-btn">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="depart_ment_tab mb-30">
+                        <ul class="nav" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                                    <i class="flaticon-doctor"></i>
+                                    <h4>Check Up</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                                    <i class="flaticon-cardiovascular"></i>
+                                    <h4>Cardiology</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                                    <i class="flaticon-ear"></i>
+                                    <h4>ENT Specialists</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Astrology-tab" data-toggle="tab" href="#Astrology" role="tab" aria-controls="contact" aria-selected="false">
+                                    <i class="flaticon-bone"></i>
+                                    <h4>Cancers</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Neuroanatomy-tab" data-toggle="tab" href="#Neuroanatomy" role="tab" aria-controls="contact" aria-selected="false">
+                                    <i class="flaticon-lung"></i>
+                                    <h4>Neuroanatomy</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Blood-tab" data-toggle="tab" href="#Blood" role="tab" aria-controls="contact" aria-selected="false">
+                                    <i class="flaticon-cell"></i>
+                                    <h4>Blood Screening</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dept_main_info white-bg">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <!-- single_content  -->
+                        <div class="row align-items-center">
+                            <div class="col-lg-5">
+                                <div class="dept_thumb">
+                                    <img src="./static/img/experts/medify.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="dept_info">
+                                    <h1><span>Why MEDIFY.AI ?</span></h1>
+                                    <p><strong>Physical access to hospitals and lack of certified medical practioners is still the major barrier to both preventive and curative health services, and also the major differences between Rural and Urban India. Besides, affordability of medical expenditures is one of the biggest problems faced by patients. The challenge here is that a trained human eye of a medical professional cannot identify subtle signs on these tests.</strong> </p>
+                                    <a href="{{url_for('service')}}" class="boxed-btn">Test it Right Now.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single_content  -->
+                    </div>
+                    
+                    <!-- single_content  -->
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- depertment_area_end  -->
+    <br>
+    <br>
+
+<!-- expert_doctors_area_start -->
+<section id="about_us_section">
+    <div class="expert_doctors_area p-0">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-lg-6">
+                    <div class="section_title mb-55 text-center">
+                        <h3>Our Team</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="single_expert">
+                        <div class="expert_thumb">
+                            <img src="./static/img/experts/ankita.jpg" alt="">
+                        </div>
+                        <div class="experts_name text-center">
+                            <h3>Ankita Jaiswal</h3>
+                            <span>Student at IIT ISM Dhanbad</span>
+                            <span>ML Enthusiast, Web Developer</span>
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-github"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single_expert">
+                        <div class="expert_thumb">
+                            <img src="./static/img/experts/vanshika.jpg" alt="">
+                        </div>
+                        <div class="experts_name text-center">
+                            <h3>Vanshika Shukla</h3>
+                            <span>Student at IIIT Nagpur</span>
+                            <span>Web Developer</span>
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-github"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- expert_doctors_area_end -->
+
+    <section id="contact_us_section">
+    <div class="book_apointment_area">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-7">
+                    <div class="popup_box ">
+                        <div class="popup_inner">
+                            <h3>
+                                Team 
+                            <span>RetroSynth</span>
+                            </h3>
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-xl-9">
+                                        <input type="text"  placeholder="Your name ">
+                                    </div>->
+                                    <div class="col-xl-9">
+                                        <input type="email"  placeholder="Email Address">
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <input type="text"  placeholder="Your Message">
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <button type="submit" class="boxed-btn3">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Emergency_contact start -->
+    <div class="Emergency_contact">
+        <div class="Emergency_contact_inner ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="single_emergency">
+                            <div class="info">
+                                <span>Get Cost effective and accurate predictions</span>
+                                <h3>Your E-Medical Reports</h3>
+                            </div>
+                            <div class="info_button">
+                                <a href="{{ url_for('home', _anchor='contact_us_section') }}" class="boxed-btn3-white">Contact US
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single_emergency align-items-center d-flex justify-content-end">
+                            <div class="icon">
+                                <i class="flaticon-call"></i>
+                            </div>
+                            <div class="info">
+                                <span>Emergency Medical Care</span>
+                                <h3>+1-465 4545</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Emergency_contact end -->
+
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="./static/img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">An interactive platform to aid <br> patients to get their scans' reports <br> easily using AI and ML.
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Our Services
+                            </h3>
+                            <ul class="links">
+                                <li><a href="{{ url_for('service') }}" >Alzheimer</a></li>
+                                <li><a href="{{ url_for('service') }}" >Breast Cancer</a></li>
+                                <li><a href="{{ url_for('service') }}" >Diabetic Retinopathy</a></li>
+                                <li><a href="{{ url_for('service') }}" >Melanoma Cancer</a></li>
+                                <li><a href="{{ url_for('service') }}" >Pneumonia</a></li>
+                                <li><a href="{{ url_for('service') }}" >Liver Disease Detection</a></li>
+                                <li><a href="{{ url_for('service') }}" ></a>Heart Disease Detection</li>
+                                <li><a href="{{ url_for('service') }}" >Color Blindness</a></li>
+                                <li><a href="{{ url_for('service') }}" >Skin Cancer</a></li>
+                                <li><a href="{{ url_for('service') }}" >More tests</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4  col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                We’re Available
+                            </h3>
+                            <ul class="meting_time">
+                                <li class="d-flex justify-content-between "><span>Monday - Friday</span> <span>8.00 - 18.00</span></li>
+                                <li class="d-flex justify-content-between "><span>Saturday  </span> <span>8.00 - 18.00</span></li>
+                                <li class="d-flex justify-content-between "><span>Sunday</span> <span>8.00 - 13.00</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+    <script src="./static/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./static/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./static/js/popper.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/owl.carousel.min.js"></script>
+    <script src="./static/js/isotope.pkgd.min.js"></script>
+    <script src="./static/js/ajax-form.js"></script>
+    <script src="./static/js/waypoints.min.js"></script>
+    <script src="./static/js/jquery.counterup.min.js"></script>
+    <script src="./static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="./static/js/scrollIt.js"></script>
+    <script src="./static/js/jquery.scrollUp.min.js"></script>
+    <script src="./static/js/wow.min.js"></script>
+    <script src="./static/js/nice-select.min.js"></script>
+    <script src="./static/js/jquery.slicknav.min.js"></script>
+    <script src="./static/js/jquery.magnific-popup.min.js"></script>
+    <script src="./static/js/plugins.js"></script>
+    <script src="./static/js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="./static/js/contact.js"></script>
+    <script src="./static/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./static/js/jquery.form.js"></script>
+    <script src="./static/js/jquery.validate.min.js"></script>
+    <script src="./static/js/mail-script.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="./static/js/main.js"></script>
+
+    <script>
+        $('.datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-calendar"></span>'
+            }
+        });
+
+        $('.timepicker').timepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-clock-o"></span>'
+            }
+        });
+    $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+    </script>
+</body>
+
+</html>
+
+<style>
+  .hover_effect:hover{
+    transform: scale(1.05); 
+    /*color: whitecss;*/
+     background: #00c6ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00c6ff, #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+}  
+</style>
