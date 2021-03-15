@@ -52,7 +52,7 @@ The model uses EfficientNet architecture for convolutional neural networks with 
 3. Activate the virtual environment with command on root dir : source your_env_name/bin/activate
 4. Change the location to subfolder and run app.py using python3 app.py
 
-USE CASES:
+**USE CASES:**
 
 Our software identifies the key factors/markers of health and fitness of an individual.
 The usage and scope of the software is not limited to people,places or time.
